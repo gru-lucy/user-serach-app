@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom"
-import "./App.css"
 import Dashboard from "./pages"
 import Users from "./pages/users"
 import UserProfile from "./pages/users/UserProfile"
 import NotFound from "./pages/NotFound"
+import "./App.css"
 
 const App = () => {
   return (
