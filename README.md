@@ -1,27 +1,52 @@
-# vite-template-redux
+# User Management Application
 
-Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
+A simple React application for listing and searching users using data from the DummyJSON API.
 
-```sh
-npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
-```
+## Features
 
-## Goals
+- View a list of users with:
+  - First name
+  - Last name
+  - Email
+  - Phone
+  - Company name
+- Search users by name.
+- View detailed information for each user.
 
-- Easy migration from Create React App or Vite
-- As beginner friendly as Create React App
-- Optimized performance compared to Create React App
-- Customizable without ejecting
+## Technologies Used
 
-## Scripts
+- React
+- Redux Toolkit
+- React Router
+- Tailwind CSS
+- TypeScript
 
-- `dev`/`start` - start dev server and open browser
-- `build` - build for production
-- `preview` - locally preview production build
-- `test` - launch test runner
+## Installation
 
-## Inspiration
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/gru-lucy/user-search-app.git
+   cd user-search-app
+   ```
 
-- [Create React App](https://github.com/facebook/create-react-app/tree/main/packages/cra-template)
-- [Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react)
-- [Vitest](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib)
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the application:
+   ```bash
+   npm start
+   ```
+
+4. Open your browser and go to [http://localhost:5173](http://localhost:5173).
+
+## Usage
+
+- The application displays a list of users.
+- Use the search bar to filter users by name.
+- Click on a user to see more details.
+
+---
+
+Thank you for reviewing this application!
