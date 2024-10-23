@@ -1,2 +1,2 @@
-export const arrayToCommaSeparatedString = (array: string[]): string => array.join(",")
-
+export const arrayToCommaSeparatedString = (array: string[]): string =>
+  array.join(",")
