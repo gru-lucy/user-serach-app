@@ -10,7 +10,7 @@ A simple React application for listing and searching users using data from the D
   - Email
   - Phone
   - Company name
-- Search users by name.
+- Search users by email.
 - View detailed information for each user.
 
 ## Technologies Used
