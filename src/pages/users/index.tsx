@@ -1,8 +1,9 @@
 import { useState, useCallback, useMemo, useEffect } from "react";
 import { useGetUsersQuery } from "../../slices/userSlice";
 import useDebounce from "../../hooks/useDebounce";
-import { UsersTable } from "../../components/UsersTable";
+import UsersTable from "../../components/UsersTable";
 import Pagination from "../../components/Pagination";
+import SearchInput from "../../components/SearchInput";
 
 const Users = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -38,12 +39,10 @@ const Users = () => {
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Users List</h1>
 
-      <input
-        type="text"
-        placeholder="Search users..."
-        className="w-full p-2 mb-4 border border-gray-300 rounded-lg"
+      <SearchInput
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
+        placeholder="Search users..."
       />
 
       <div className="overflow-x-auto">

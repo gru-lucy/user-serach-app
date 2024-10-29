@@ -9,7 +9,7 @@ interface UsersTableProps {
   isSuccess: boolean;
 }
 
-export const UsersTable = ({ isLoading, isError, isSuccess, users }: UsersTableProps) => {
+const UsersTable = ({ isLoading, isError, isSuccess, users }: UsersTableProps) => {
   const navigate = useNavigate()
 
   return (
@@ -61,3 +61,5 @@ export const UsersTable = ({ isLoading, isError, isSuccess, users }: UsersTableP
       </tbody>
     </table>)
 }
+
+export default UsersTable
