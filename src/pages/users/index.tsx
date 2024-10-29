@@ -42,7 +42,7 @@ const Users = () => {
       <SearchInput
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Search users..."
+        placeholder="Search users by email..."
       />
 
       <div className="overflow-x-auto">
