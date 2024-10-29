@@ -2,6 +2,7 @@ import { useState, useCallback, useMemo, useEffect } from "react";
 import { useGetUsersQuery } from "../../slices/userSlice";
 import useDebounce from "../../hooks/useDebounce";
 import { UsersTable } from "../../components/UsersTable";
+import Pagination from "../../components/Pagination";
 
 const Users = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -48,26 +49,7 @@ const Users = () => {
       <div className="overflow-x-auto">
         <UsersTable isError={isError} isLoading={isLoading} isSuccess={isSuccess} users={users}></UsersTable>
       </div>
-
-      <div className="flex justify-between items-center mt-4">
-        <button
-          className={`p-2 ${page === 1 ? "text-gray-400 cursor-not-allowed" : "text-blue-500"}`}
-          onClick={handlePreviousPage}
-          disabled={page === 1}
-        >
-          Previous
-        </button>
-        <span>
-          Page {page} of {totalPages}
-        </span>
-        <button
-          className={`p-2 ${page === totalPages ? "text-gray-400 cursor-not-allowed" : "text-blue-500"}`}
-          onClick={handleNextPage}
-          disabled={page === totalPages}
-        >
-          Next
-        </button>
-      </div>
+      <Pagination page={page} totalPages={totalPages} onNext={handleNextPage} onPrevious={handlePreviousPage}></Pagination>
     </div>
   );
 };
